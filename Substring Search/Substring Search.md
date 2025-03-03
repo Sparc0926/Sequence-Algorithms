@@ -49,7 +49,7 @@ As we can see, $T(m,n)=mn-m^{2}+n+1\in O(mn)$
 |`b[0 : 5] = "abacab"` |`"ab"`       |2                    |
 |`b[0 : 6] = "abacaba"`|`"aba"`      |3                    |
 
-***Lemma.*** Let `b[0], b[1], ... ,b[k]` be the list of all borders of `str`, then either `borderArr[i + 1] == b[j].len + 1` for some $1\leq j\leq k$ or `borderArr[i + 1] == 0`.
+***Lemma.*** Let `b[0], b[1], ... ,b[k]` be the list of all borders of `str`, then either `borderArr[i + 1] == b[j].len + 1` for some $1\leq j\leq k$ or `borderArr[i + 1] == 0`.\
 *proof.* Assume `b[j]` is the longest border satisfying `str[b[j].len] == str[i + 1]`, then `b[j] + str[b[j].len]` is the longest border of `str[0 : i + 1]`, hence `borderArr[i + 1] == b[j].len + 1`.\
 If $\forall 1\leq j\leq k$ `str[b[j].len] != str[i + 1]`, assume $\exists$ border 
 
