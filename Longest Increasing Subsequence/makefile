@@ -1,13 +1,13 @@
-ALG = IsExactlyIn
+ALG = LongestIncreasingSubsequence
 
-IsExactlyIn = -D NAIVE# replace with an algorithm name or COMPARE
+LIS = -D NAIVE# replace with an algorithm name or COMPARE
 IsIn = -D NAIVE# replace with an algorithm name or COMPARE
 
 #--------------------------------#
 # Do not modify below this line! #
 #--------------------------------#
 CC = gcc
-CFLAGS = -I . -Wall -Werror -O2
+CFLAGS = -I .. -Wall -Werror -O2
 
 all: a.exe cleanO
 	

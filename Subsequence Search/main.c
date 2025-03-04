@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <time.h>
-#include <String.h>
+#include <Sequence.h>
 
 int main()
 {

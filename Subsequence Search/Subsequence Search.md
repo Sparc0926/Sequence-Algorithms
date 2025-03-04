@@ -1,4 +1,4 @@
-# Substring Search
+# Subsequence Search
 
 These prolems require searching for a substring `subStr` inside a string `str`. In the following statements, `n`, `m` stand for `str.len` and `subStr.len` respectively and `str[i:j]` means the sliced substring from `str[i]` to `str[j]`.
 
