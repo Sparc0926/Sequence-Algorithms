@@ -13,4 +13,6 @@ struct String {
 int IsExactlyIn(String* str, String* subStr);
 //int IsIn(String* str, String* subStr);
 
+void test(void);
+
 #endif//STRING_H

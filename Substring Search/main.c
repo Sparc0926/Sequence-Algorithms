@@ -1,11 +1,15 @@
 #include <stdio.h>
+#include <time.h>
 #include <String.h>
 
 int main()
 {
-    String s = {"Hello, World!", 13};
-    String sub = {"World", 5};
-    printf("%d\n", IsExactlyIn(&s, &sub));
+    time_t begin = time(NULL);
+
+    test();
+
+    time_t end = time(NULL);
+    printf("It takes %lf seconds\n", difftime(end, begin));
     
     return 0;
 }
