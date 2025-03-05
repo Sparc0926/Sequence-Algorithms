@@ -1,7 +1,7 @@
-#include <String.h>
+#include <Sequence.h>
 #include <stdio.h>
 
-static void getBorderArray(String* str, int* borderArr)
+static void get_border_array(String* str, int* borderArr)
 {
     borderArr[0] = 0;  // always 0
     for (int i = 1; i < str->len; i++) {
@@ -18,7 +18,7 @@ static void getBorderArray(String* str, int* borderArr)
 }
 
 #ifdef NAIVE  // O(mn)
-int IsExactlyIn(String* str, String* subStr)
+int is_exactly_in(String* str, String* subStr)
 {
     for (int i = 0; i <= str->len - subStr->len; i++) {
         int j = 0;
@@ -33,7 +33,7 @@ int IsExactlyIn(String* str, String* subStr)
 
 
 #ifdef BORDER_ARRAY
-int IsExactlyIn(String* str, String* subStr)
+int is_exactly_in(String* str, String* subStr)
 {
     return -1;
 }
@@ -42,7 +42,7 @@ int IsExactlyIn(String* str, String* subStr)
 
 
 #ifdef RABIN_KARP
-int IsExactlyIn(String* str, String* subStr)
+int is_exactly_in(String* str, String* subStr)
 {
     return -1;
 }
@@ -51,7 +51,7 @@ int IsExactlyIn(String* str, String* subStr)
 
 
 #ifdef BOYER_MOORE
-int IsExactlyIn(String* str, String* subStr)
+int is_exactly_in(String* str, String* subStr)
 {
     return -1;
 }
@@ -60,7 +60,7 @@ int IsExactlyIn(String* str, String* subStr)
 
 
 #ifdef KMP
-int IsExactlyIn(String* str, String* subStr)
+int is_exactly_in(String* str, String* subStr)
 {
     return -1;
 }
@@ -73,7 +73,7 @@ void test()
     String s = {"abacaba", 7};
     int borderArr[s.len];
 
-    getBorderArray(&s, borderArr);
+    get_border_array(&s, borderArr);
     for (int i = 0; i < s.len; i++) {
         printf("%d ", borderArr[i]);
     }
