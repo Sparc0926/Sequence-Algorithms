@@ -1,7 +1,7 @@
 #include <Sequence.h>
 #include <stdio.h>
 
-static void get_border_array(String* str, int* borderArr)
+static void get_border_array(Seq* str, int* borderArr)
 {
     borderArr[0] = 0;  // always 0
     for (int i = 1; i < str->len; i++) {
@@ -18,7 +18,7 @@ static void get_border_array(String* str, int* borderArr)
 }
 
 #ifdef NAIVE  // O(mn)
-int is_exactly_in(String* str, String* subStr)
+int is_exactly_in(Seq* str, Seq* subStr)
 {
     for (int i = 0; i <= str->len - subStr->len; i++) {
         int j = 0;
@@ -33,7 +33,7 @@ int is_exactly_in(String* str, String* subStr)
 
 
 #ifdef BORDER_ARRAY
-int is_exactly_in(String* str, String* subStr)
+int is_exactly_in(Seq* str, Seq* subStr)
 {
     return -1;
 }
