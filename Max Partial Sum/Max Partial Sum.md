@@ -7,7 +7,7 @@ This problem asks us to find the max sum of consecutive subsequences of a given 
 
 >***Lemma.*** At each iterarion, $sum[i]=\textup{max}(seq[i],seq[i]+sum[i-1])$.
 >**proof.** Since $sum[i]$ involves $seq[i]$, it either or not involves $seq[i-1]$.
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If it involves $seq[i-1]$, it's added upon a tail sum of $seq[i-1]$, hence $seq[i]+sum[i-1]$ is maximal.
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If it involves $seq[i-1]$, it's added upon a tail sum of $seq[i-1]$, hence $seq[i]+sum[i-1]$ is maximal.\
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If it does not involves $seq[i-1]$, it can only be $seq[i]$ itself.
 
 One might also notice that to evaluate `max(seq[i], seq[i] + sum[i - 1])` is the same as evaluating `max(0, sum[i - 1])` which can be simply written as
