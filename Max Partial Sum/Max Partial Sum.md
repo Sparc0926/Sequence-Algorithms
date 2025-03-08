@@ -5,8 +5,8 @@ This problem asks us to find the max sum of consecutive subsequences of a given 
 1. $max$, records the current **max partial sum**;
 2. $sum[n]$, $sum[i]$ is the **max tail sum** of $seq[0:i]$.
 
->***Lemma.*** At each iterarion, $sum[i]=\textup{max}(seq[i],seq[i]+sum[i-1])$.
->**proof.** Since $sum[i]$ involves $seq[i]$, it either or not involves $seq[i-1]$.
+>***Lemma.*** At each iterarion, $sum[i]=\textup{max}(seq[i],seq[i]+sum[i-1])$.\
+>**proof.** Since $sum[i]$ involves $seq[i]$, it either or not involves $seq[i-1]$.\
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If it involves $seq[i-1]$, it's added upon a tail sum of $seq[i-1]$, hence $seq[i]+sum[i-1]$ is maximal.\
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If it does not involves $seq[i-1]$, it can only be $seq[i]$ itself.
 
